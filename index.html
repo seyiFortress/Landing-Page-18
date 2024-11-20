@@ -12,20 +12,25 @@
 <body>
     <div class="overlay"></div>
     <div id="box">
-        <header>
-            <p id="logo">Startup 3</p>
-            <nav>
-                <ul id="menu">
-                    <li><a href="#">Get App</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">F.A.Q.</a></li>
-                    <li><a href="#">Sign In</a></li>
-                </ul>
+        <header id="nav">
+            <input type="checkbox" id="sidebar-active"/>
+            <label for="sidebar-active" id="open-sidebar-button">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <section id="menu">
+                <label for="sidebar-active" id="close-sidebar-button">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+                <a href="#"  id="logo">Startup 3</a>
+                <a href="#">Get App</a>
+                <a href="#">Features</a>
+                <a href="#">About</a>
+                <a href="#">F.A.Q.</a>
+                <a href="#">Sign In</a>
                 <a #middle-fill-button href="#">
                     <button id="middle-fill">Sign Up</button>
                 </a>
-            </nav>
+            </section>
         </header>
         <main>
             <section id="test">
@@ -43,5 +48,6 @@
             </section>
         </main>
     </div>
+    <script src="https://kit.fontawesome.com/77734b46b2.js" crossorigin="anonymous"></script>
 </body>
 </html>

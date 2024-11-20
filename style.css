@@ -11,6 +11,7 @@
 html{
     font-family: "DM Sans", sans-serif;
     font-size: 18px;
+    font-weight: 200;
     font-optical-sizing: auto;
     font-style: normal;
     color: #ffffff;
@@ -29,83 +30,95 @@ body .overlay{
     height: 100%;
     width: 100%;
 }
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+i{
+    fill: #fff;
+    font-size: 2.5rem;
+}
 #box{
-    width: 85%;
-    /* min-width: 48em; */
-    max-width: 960px;
+    max-width: 1072px;
     margin: auto;
-    padding-top: .5em;
-    padding-bottom: 6em;
+    padding: .5em 1em 6em;
     display: flex;
     flex-direction: column;
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#nav{
     width: 100%;
+    height: 40px;
     margin-top: 3.2em;
+    /* background-color: darkgoldenrod; */
 }
-#box nav{
+#nav #menu{
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
-    column-gap: 1.7em;
+    flex-direction: row;
+    justify-content: flex-end;
     align-items: center;
+    column-gap: 2em;
 }
-#menu{
-    display: flex;
-    font-size: .8rem;
-    column-gap: 3em;
-    font-weight: 200;
-    list-style: none;
+#nav #menu a{
+height: 100%;
+display: flex;
+align-items: center;
 }
-#logo{
+#nav #logo{
     font-size: 1rem;
+    font-weight: 600;
+    margin-right: auto;
 }
-#menu li a{
-    text-decoration: none;
-    color: #ffffff;
+#sidebar-active, #open-sidebar-button, #close-sidebar-button{
+    display: none;
+}
+#open-sidebar-button{
+    text-align: right;
 }
 #middle-fill{
     font-size: 1rem;
     padding: 0.5em 1.2em;
+    border: none;
     border-radius: 10em; 
     background-color: #fff;
     color: #482be7;
 }
 main{
-    width: 100%;
-    margin-top: auto;
+    width: 58.4%;
     margin-top: 5em;
 }
-section #test{
+main #test{
     width: 100%;
 }
-main #test h1{
+#test h1{
     font-size: 4rem;
-    width: 58%;
+    width: 100%;
 }
 #test h5{
     font-size: 1.2rem;
     font-weight: 300;
+    width: 100%;
     margin-top: 1.6em;
-    width: 58%;
+    padding-right: 1em;
 }
 main #cto{
     width: 100%;
     margin-top: 2em;
+    min-width: 360px;
 }
-main #cto a{
+#cto a{
     text-decoration: none;
 }
-main #cto #big-fill{
+#cto #big-fill{
     font-size: 1rem;
     padding: 0.9em 1.7em;
     background: #ffffff;
     border-radius: 5.6em;
+    border: none;
     color: #482BE7;
 }
-main #cto #big-white-outline{
+#cto #big-white-outline{
     font-size: 1rem;
     color: #FFFFFF;
     background: rgba(255, 255, 255, 0.30);
@@ -122,47 +135,36 @@ main #cto #big-white-outline{
     Mobile Screen layout
 ......................... */
 
-@media (max-width:425px) {
-    html{
-        font-size: 14px;
-    }
-    body .overlay{
+@media (max-width:775px){
+    #nav #menu{
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+
+
         position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 75%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.98);
     }
-    #box{
-        width: 85%;
-        max-width: 320px;
-        padding-top: 0;
-        padding-bottom: 3em;
+    /* #close-sidebar-button, #middle-fill-button #middle-fill{
+        align-self: center;
+    } */
+    #nav #menu a{
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
     }
-    header{
+    #open-sidebar-button, #close-sidebar-button{
+        display: block;
+        padding: 5px 50px;
+    }
+    #sidebar-active:checked ~ #menu{
         display: flex;
-        flex-direction: column;
-        justify-items: flex-start;
-        row-gap: 4em;
-        width: 100%;
-        margin-top: 3.2em;
-    }
-    #box nav{
-        display: flex;
-        flex-direction: column;
-        row-gap: 2em;
-        align-items: center;
-        width: auto;
-    }
-    #menu{
-        font-size: .8rem;
-        font-weight: 400;
-        column-gap: 2em;
-    }
-    main #test h1{
-        font-size: 3rem;
-        width: 100%;
-    }
-    #test h5{
-        font-size: 1rem;
-        font-weight: 150;
-        margin-top: 1.6em;
-        width: 100%;
     }
 }
