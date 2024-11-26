@@ -1,170 +1,181 @@
+:root{
+    --ff-sans: "DM Sans", serif;
+    --fs-12: 0.75rem;
+    --fs-14: 0.87rem;
+    --fs-base: 1.125rem;
+    --fs-20: 1.25rem;
+    --fs-22: 1.375rem;
+    --fs-24: 1.5rem;
+    --fs-36: 2.25rem;
+    --fs-54: 3.38rem;
+    --fs-72: 4.5rem;
+
+    --clr-base: #FFFFFF;
+    --clr-base-30: rgba(255, 255, 255, .3);
+    --clr-action: #482BE7;
+    --clr-action-80: rgba(71, 43, 231, 0.8);
+    --clr-bckg: rgba(46, 24, 147, 0.5);
+}
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* ...................
-    Big Screen layout
-...................... */
-
-html{
-    font-family: "DM Sans", sans-serif;
-    font-size: 18px;
-    font-weight: 200;
-    font-optical-sizing: auto;
-    font-style: normal;
-    color: #ffffff;
-}
-body{
-    position: relative;
-    background-image: url("img/9d359a1983d55a33bd9d1ef454ff22f9.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-body .overlay{
-    position: fixed;
-    background-color: #2e189388;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-}
-a{
     text-decoration: none;
-    color: #ffffff;
+    color: var(--clr-base);
+    font-family: var(--ff-sans);
 }
-i{
-    fill: #fff;
-    font-size: 2.5rem;
+
+body{
+    background-image: url(/img/9d359a1983d55a33bd9d1ef454ff22f9.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-#box{
-    max-width: 1072px;
-    margin: auto;
-    padding: .5em 1em 6em;
+.wrapper{
+    max-width: 67rem;
+    margin-inline: auto;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+nav{
     display: flex;
-    flex-direction: column;
-}
-#nav{
-    width: 100%;
-    height: 40px;
-    margin-top: 3.2em;
-    /* background-color: darkgoldenrod; */
-}
-#nav #menu{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
-    column-gap: 2em;
+    height: 2.5rem;
 }
-#nav #menu a{
-height: 100%;
-display: flex;
-align-items: center;
-}
-#nav #logo{
-    font-size: 1rem;
-    font-weight: 600;
+.logo{
     margin-right: auto;
+    font-size: var(--fs-24);
+    letter-spacing: -0.018rem;
 }
-#sidebar-active, #open-sidebar-button, #close-sidebar-button{
+/* nav label i{
+    width: 10rem;
+    height: 10rem;
+} */
+#sidebar-active, .sidebar-btn{
     display: none;
 }
-#open-sidebar-button{
-    text-align: right;
+.links-container{
+    font-size: var(--clr-base);
+    display: flex;
+    align-items: center;
+    flex-direction: row;
 }
-#middle-fill{
-    font-size: 1rem;
-    padding: 0.5em 1.2em;
-    border: none;
-    border-radius: 10em; 
-    background-color: #fff;
-    color: #482be7;
+.links-container a{
+    padding-inline: 1.25rem;
+}
+.links-container button{
+    font-size: var(--clr-action);
+    color: var(--clr-action);
+    padding-inline: 1.125rem;
+    padding-block: 0.44rem;
+    border-radius: 6.25rem;
+    background-color: var(--clr-base);
+
 }
 main{
-    width: 58.4%;
-    margin-top: 5em;
+    max-width: 37.1rem;
+    height: auto;
+    margin-top: 6rem;
 }
-main #test{
+main h1{
+    font-size: var(--fs-72);
+    letter-spacing: -0.0625rem;
+    line-height: 5.37rem;
+    margin-bottom: 2rem;
+}
+main p{
+    font-size: var(--fs-22);
+    line-height: 2rem;
+}
+.cto-buttons{
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1.25rem;
+    margin-top: 2.2rem;
+}
+.cto-buttons button{
+    padding: 1.0625rem 1.875rem;
+    border-radius: 6.25rem;
+    font-size: var(--fs-20);
+}
+.cto-buttons .filled{
+    border-style: none;
+    color: var(--clr-action);
+}
+.cto-buttons .transparent{
+    border: 0.125rem solid var(--clr-base);
+    background-color: var(--clr-base-30);
+}
+.overlay{
+    background-color: var(--clr-bckg);
+    height: 100%;
     width: 100%;
-}
-#test h1{
-    font-size: 4rem;
-    width: 100%;
-}
-#test h5{
-    font-size: 1.2rem;
-    font-weight: 300;
-    width: 100%;
-    margin-top: 1.6em;
-    padding-right: 1em;
-}
-main #cto{
-    width: 100%;
-    margin-top: 2em;
-    min-width: 360px;
-}
-#cto a{
-    text-decoration: none;
-}
-#cto #big-fill{
-    font-size: 1rem;
-    padding: 0.9em 1.7em;
-    background: #ffffff;
-    border-radius: 5.6em;
-    border: none;
-    color: #482BE7;
-}
-#cto #big-white-outline{
-    font-size: 1rem;
-    color: #FFFFFF;
-    background: rgba(255, 255, 255, 0.30);
-    border-radius: 5.5em;
-    border: 0.1em solid rgba(255, 255, 255, 1);
-    padding: 0.9em 1.8em;
-    margin-left: 1.2em;
-}
-#box a, button{
-    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-/* ......................
-    Mobile Screen layout
-......................... */
-
-@media (max-width:775px){
-    #nav #menu{
-        display: none;
+@media (max-width:1140px) {
+    .wrapper{
+        width: 90vw;
+    }
+}
+@media (max-width:840px) {
+    .links-container{
+        width: 100vw;
+        height: 100vh;
+        padding-block: 3rem;
         flex-direction: column;
         align-items: flex-start;
-
-
+        background-color: var(--clr-action-80);
         position: fixed;
         top: 0;
-        right: 0;
-        z-index: 10;
-        width: 75%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.98);
+        right: -6.25rem;
+        z-index: 5;
+        display: none;
+        transition: 0.25s ease-in-out;
     }
-    /* #close-sidebar-button, #middle-fill-button #middle-fill{
-        align-self: center;
-    } */
-    #nav #menu a{
+    .links-container a{
         box-sizing: border-box;
-        height: auto;
+        padding-block: 1.25rem;
+        padding-left: 3rem;
         width: 100%;
-        padding: 20px 30px;
         justify-content: flex-start;
     }
-    #open-sidebar-button, #close-sidebar-button{
-        display: block;
-        padding: 5px 50px;
+    .links-container a:hover{
+        background-color: rgba(0, 0, 0, 0.842);
     }
-    #sidebar-active:checked ~ #menu{
+    .links-container button, i{
+        margin-left: 3rem;
+    }
+    .sidebar-btn{
+        display: block;
+        width: 6rem;
+    }
+    #sidebar-active:checked ~ .links-container{
         display: flex;
+        right: 0;
+    }
+}
+@media (max-width:420px) {
+    main h1{
+        font-size: var(--fs-54);
+        text-align: center;
+        line-height: 2.68rem;
+    }
+    main p{
+        /* font-size: var(--fs-14); */
+        text-align: justify;
+    }
+    .cto-buttons{
+        flex-direction: column;
+        row-gap: 1.25rem;
+        margin-top: 2.2rem;
+    }
+}
+@media (max-width:398px) {
+    main p{
+        text-align: center;
     }
 }

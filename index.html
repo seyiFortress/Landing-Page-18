@@ -7,47 +7,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Landing Page</title>
+    <title>Landing Page 18</title>
 </head>
 <body>
-    <div class="overlay"></div>
-    <div id="box">
-        <header id="nav">
+    <div class="wrapper">
+        <nav>
+            <div class="logo">
+                <a href="#">Startup 3</a>
+            </div>
             <input type="checkbox" id="sidebar-active"/>
-            <label for="sidebar-active" id="open-sidebar-button">
-                <i class="fa-solid fa-bars"></i>
+            <label for="sidebar-active" class="open-sidebar-btn sidebar-btn">
+                <i class="fa-solid fa-bars fa-2x"></i>
             </label>
-            <section id="menu">
-                <label for="sidebar-active" id="close-sidebar-button">
-                    <i class="fa-solid fa-xmark"></i>
+            <div class="links-container">
+                <label for="sidebar-active" class="close-sidebar-btn sidebar-btn">
+                    <i class="fa-solid fa-circle-xmark fa-2x"></i>
                 </label>
-                <a href="#"  id="logo">Startup 3</a>
                 <a href="#">Get App</a>
                 <a href="#">Features</a>
                 <a href="#">About</a>
                 <a href="#">F.A.Q.</a>
                 <a href="#">Sign In</a>
-                <a #middle-fill-button href="#">
-                    <button id="middle-fill">Sign Up</button>
-                </a>
-            </section>
-        </header>
+                <button>Sign Up</button>
+            </div>
+        </nav>
         <main>
-            <section id="test">
-                <h1>Startup Framework.
-                    Suit Up Your Startup</h1>
-                <h5>We have created a new product that will help designers, developers and companies create websites for their startups quickly and easily.</h5>
-            </section>
-            <section id="cto">
-                <a href="#">
-                    <button id="big-fill">Get Started</button>
-                </a>
-                <a href="#">
-                    <button id="big-white-outline">Learn More</button>
-                </a>
-            </section>
+            <h1>Startup Framework.
+                Suit Up Your Startup</h1>
+                <p>We have created a new product that will help designers, developers and companies create websites for their startups quickly and easily.</p>
         </main>
+        <div class="cto-buttons">
+            <button class="filled">
+                Get Started
+            </button>
+            <button class="transparent">
+                Learn More
+            </button>
+        </div>
     </div>
+    <div class="overlay"></div>
     <script src="https://kit.fontawesome.com/77734b46b2.js" crossorigin="anonymous"></script>
 </body>
 </html>
